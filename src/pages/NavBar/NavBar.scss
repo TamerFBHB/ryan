@@ -1,0 +1,83 @@
+@use "../../SASS/Main" as * ;
+
+.Bar{
+    @include size(90px, 550PX);
+    @include flex-col(start, center) ;
+    margin-top: 10px;
+}
+.sideBar-above{
+    @include size(100% , 150PX);
+    @include flex-col(center,center) ;
+    gap: 15px;
+    background-color:  $bg-color;
+    border-radius: 5px;
+}
+
+.sideBar-down{
+    @include size(100% , 400PX);
+    @include flex-col(center,center) ;
+    gap: 30px;
+    margin-top: 8px;
+    background-color: $bg-color;
+    border-radius: 5px;
+}
+//###### menubar
+.menubar{
+    @include size(30px , 30px) ;
+    @include flex-col(center,start) ;
+}
+.menubar .one, .two , .three{
+    background-color:  $text-Color;
+    @include size(100% , 2px) ;
+    transition: 0.53s;
+}
+.menubar  .two , .three{
+    height: 2px;
+    margin-top: 6px;
+}
+.menubar:hover .one{
+    width: 60%;
+}
+
+
+.Bar-ryan{
+    display: none;
+}
+.Bar-ryan h1{
+    font-size: 18px;
+    font-weight: 400;
+    color: $text-Color;
+}
+.Bar-ryan h6{
+    font-size: 8px;
+    font-weight: 400;
+    color: $main-color;
+}
+
+
+
+
+
+// screen mobile
+@media (max-width:420px) {
+    .Bar-ryan{
+        display: block;
+    }
+    .Bar{
+        @include size(100%, 120PX);
+        @include flex(center, center) ;
+        margin: 0px;
+    }
+
+    .sideBar-above{
+        @include size(100%, 60PX);
+        border-radius: 0px;
+        // background-color: yellow
+    }
+    
+    .sideBar-down{
+        @include size(100%, 60PX);
+        margin: 0px;
+        border-radius: 0px;
+    }
+}

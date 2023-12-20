@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Khula", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+@media (max-width: 992px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+@media (max-width: 420px) {
+  .container {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}
+//global rules
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+  padding: 6px 12px;
+}
