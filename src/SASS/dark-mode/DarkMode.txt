@@ -1,3 +1,5 @@
+in file.js:
+---------
 import { ReactComponent as Sun } from "./Sun.svg";
 import { ReactComponent as Moon } from "./Moon.svg";
 import "./DarkMode.scss"
@@ -49,3 +51,39 @@ const DarkMode = () => {
 }
 
 export default DarkMode;
+
+#########################################
+in file.scss:
+------------
+@use "../SASS/Main" as *;
+
+.dark_mode{
+    position: relative;
+    @include circle(45px);
+    border: none;
+    cursor: pointer;
+}
+
+.sun{
+    @include center ;
+    @include icon-Bold(20px, $orange-6); 
+
+}
+.moon{
+    @include center ;   
+}
+
+#########################################
+in index.scss:
+-------------
+@use "./SASS/Main" as * ;
+
+:root{
+    --bgcolor : #{$blue-0};
+    --text-color : #{$gray-9};
+}
+
+[data-theme="dark"]{
+    --bgcolor :  #{$gray-9};
+    --text-color :#{$blue-0};
+}

@@ -1,2 +1,17 @@
 @use "./SASS/Main" as * ;
 
+
+
+:root{
+    --bg-main-color: #{$cyan-6};
+    --bg-second-color: #{$green-4};
+    --bg-color : #{$blue-0};
+    --text-color : #{$gray-8};
+}
+
+[data-theme="dark"]{
+    --bg-main-color: #{$cyan-6};
+    --bg-second-color: #{$green-4};
+    --bg-color :  #{$gray-8};
+    --text-color :#{$blue-0};
+}

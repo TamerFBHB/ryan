@@ -34,13 +34,13 @@ const Home = () => {
                             repeat={Infinity}
                         />
                     </h6>
-                    <div className='social'>
-                        <FaLinkedinIn className='icon' />
-                        <BsTwitterX className='icon' />
-                        <FaFacebook className='icon' />
-                        <FaInstagram className='icon' />
-                        <FaYoutube className='icon' />
-                    </div>
+                        <div className='social'>
+                            <FaLinkedinIn className='icon' />
+                            <BsTwitterX className='icon' />
+                            <FaFacebook className='icon' />
+                            <FaInstagram className='icon' />
+                            <FaYoutube className='icon' />
+                        </div>
                 </div>
                 <div className='Footer-home'>
                     <div>download cv</div>

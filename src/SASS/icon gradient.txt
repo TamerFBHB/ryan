@@ -9,5 +9,7 @@ in file.js from react-icon :
       </svg>
 
 in css for react-icon:
+to change color of icon :
+
 
 fill:  url (#blue-gradient)

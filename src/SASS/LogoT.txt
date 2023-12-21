@@ -1,5 +1,5 @@
-in index.html  add font google
-########################################
+in index.html  add font google:
+
 <!-- google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -8,13 +8,16 @@ in index.html  add font google
       rel="stylesheet"
     />
 
-in file.jsx:
+
 ########################################
+in file.jsx:
 
 <div className="LogoT"> <h1>T</h1> </div>
 
-in file.scss:
+
 ########################################
+in file.scss:
+
 .LogoT {
   display: flex;
   justify-content: center;

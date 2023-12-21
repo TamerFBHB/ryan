@@ -7,7 +7,7 @@
 .home {
   @include size(calc(100% - 100px), 100%);
   margin-left: 15px;
-  background-color:  $bg-color ;
+  background-color:  var(--bg-color) ;
   border-radius: 5px;
   position: relative;
 }
@@ -17,11 +17,11 @@
   border-radius: 5px;
 }
 .home .inform-ryan h1 {
-  color: $text-Color;
+  color: var(--text-color);
   text-align: center;
 }
 .home .inform-ryan h6 {
-  color: $main-color;
+  color: $green-6;
   text-align: center;
   font-weight: 400;
   letter-spacing: 0em;
@@ -30,7 +30,7 @@
 .home .social {
   @include flex(center, center);
   gap: 15px;
-  color: $text-Color;
+  color: var(--text-color);
   margin-top: 15px;
 }
 .home .social .icon {
@@ -45,15 +45,15 @@
 }
 .home .Footer-home div {
   text-transform: uppercase;
-  color: $text-Color;
+  color: var(--text-color);
   font-weight: 400;
   cursor: pointer;
   @include size(100%, 100%);
   @include flex(center, center);
-  border-top: 1px solid #a4a4a446;
+  border-top: 1px solid  $gray-4;
 }
 .home .Footer-home div:nth-child(1) {
-  border-right: 1px solid #a4a4a446;
+  border-right: 1px solid $gray-4;
 }
 
 // screen mobile

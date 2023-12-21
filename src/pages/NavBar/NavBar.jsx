@@ -3,9 +3,11 @@ import "./NavBar.scss"
 import { TypeAnimation } from 'react-type-animation';
 import DarkMode from '../../DarkMode/DarkMode';
 
+
+
 const NavBar = () => {
     return (
-        <div className='Bar '>
+        <div className='Bar'>
             <div className='sideBar-above'>
                 <div className='menubar'>
                     <div className='one'></div>

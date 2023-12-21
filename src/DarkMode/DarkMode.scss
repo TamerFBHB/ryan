@@ -3,24 +3,17 @@
 
 .dark_mode{
     position: relative;
-    @include circle(35px);
+    @include circle(45px);
     border: none;
     cursor: pointer;
 }
-.day{
-    background-color: $orange-5;
-}
-.night{
-    background-color: $gray-2;
-}
+
 .sun{
     @include center ;
-    @include circle(30px);
-    border: none;
+    @include icon-Bold(20px, $orange-6); 
+
 }
 .moon{
     @include center ;   
-    @include circle(30px);
-    border: none;
 }
 

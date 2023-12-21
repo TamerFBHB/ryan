@@ -166,17 +166,3 @@ $orange-6 :#FD7E14;
 $orange-7 :#F76707;
 $orange-8 :#E8590C;
 $orange-9 :#D9480F;
-
-$main-color: #6ec1e4;
-$second-color: #61ce70;
-$bg-color: white;
-$text-Color: #323232;
-:root{
-
-    &.dark{
-        $main-color: #6ec1e4;
-        $second-color: #61ce70;
-        $text-Color: white ;
-        $bg-color:  #323232;
-    }
-    }  

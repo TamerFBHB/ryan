@@ -1,5 +1,6 @@
 @use "../../SASS/Main" as * ;
 
+
 .Bar{
     @include size(90px, 550PX);
     @include flex-col(start, center) ;
@@ -9,8 +10,8 @@
     @include size(100% , 150PX);
     @include flex-col(center,center) ;
     gap: 15px;
-    background-color:  $bg-color;
     border-radius: 5px;
+    background-color: var(--bg-color);
 }
 
 .sideBar-down{
@@ -18,7 +19,7 @@
     @include flex-col(center,center) ;
     gap: 30px;
     margin-top: 8px;
-    background-color: $bg-color;
+    background-color:  var(--bg-color);
     border-radius: 5px;
 }
 //###### menubar
@@ -27,9 +28,9 @@
     @include flex-col(center,start) ;
 }
 .menubar .one, .two , .three{
-    background-color:  $text-Color;
+    background-color: var(--text-color);
     @include size(100% , 2px) ;
-    transition: 0.53s;
+    transition: 0.5s;
 }
 .menubar  .two , .three{
     height: 2px;
@@ -46,12 +47,12 @@
 .Bar-ryan h1{
     font-size: 18px;
     font-weight: 400;
-    color: $text-Color;
+    color:   var(--text-color);
 }
 .Bar-ryan h6{
     font-size: 8px;
     font-weight: 400;
-    color: $main-color;
+    color: $green-6;
 }
 
 
@@ -81,3 +82,4 @@
         border-radius: 0px;
     }
 }
+
