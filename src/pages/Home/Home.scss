@@ -1,14 +1,14 @@
 @use "../../SASS/Main" as *;
 
 .AllHome {
-  @include size(100%, 90vh);
-  @include flex(center, START);
+  @include size(700px, 90vh);
+  @include flex(end, START);
 }
 .home {
-  @include size(calc(100% - 100px), 100%);
-  margin-left: 15px;
+  @include size(calc(80% - 75px), 100%);
+  margin-left: 10px;
   background-color:  var(--bg-color) ;
-  border-radius: 5px;
+  border-radius: 8px;
   position: relative;
 }
 .avatar1 {
@@ -21,7 +21,7 @@
   text-align: center;
 }
 .home .inform-ryan h6 {
-  color: $green-6;
+  color: var(--bg-second-color);
   text-align: center;
   font-weight: 400;
   letter-spacing: 0em;
@@ -50,26 +50,33 @@
   cursor: pointer;
   @include size(100%, 100%);
   @include flex(center, center);
-  border-top: 1px solid  $gray-4;
+  border-top: 1px solid  var(--border-color);
 }
 .home .Footer-home div:nth-child(1) {
-  border-right: 1px solid $gray-4;
+  border-right: 1px solid var(--border-color);
 }
 
 // screen mobile
 @media (max-width: 992px) {
   .AllHome {
-    @include size(100%, 90vh);
-    margin-left: 0%;
+      @include size(100%, 70%);
+      @include flex(center, start);
+      padding-top: 20px;
+  }
+  .home {
+    @include size(calc(80% - 75px), 100%);    
+    margin-left: 80px;
   }
 }
 @media (max-width: 420px) {
     .AllHome {
-        @include size(100vw ,100vh);
+        @include size(100vw ,100%);
         @include flex-col(start, center);
+        padding: 0;
+        margin: 0;
     }
     .home {
-        @include size(100%, calc(100% - 100px));
+        @include size(100%, 100%);
         margin-left: 0px;
       }
   }

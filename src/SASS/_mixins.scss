@@ -226,9 +226,9 @@
   writing-mode: vertical-rl;
 }
 
-//22- text strock
-@mixin text-stroke($clr-Strock, $clr-background, $size, $weight) {
-  -webkit-text-stroke: 2px $clr-Strock;
+//22- text strock لكتابه كلمات مفرغه
+@mixin text-stroke($size-Strock,$clr-Strock, $clr-background, $size, $weight) {
+  -webkit-text-stroke: $size-Strock  $clr-Strock;
   color: $clr-background;
   font-size: $size;
   font-weight: $weight;

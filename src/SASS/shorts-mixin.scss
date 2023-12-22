@@ -61,8 +61,8 @@
 //21- text vertical
 @include text-vertical;
 
-// 22- text strock
-@include text-stroke($clr-Strock, $clr-background, $size, $weight);
+// 22- text strock لكتابه كلمات مفرغه
+@include text-stroke($size-Strock,$clr-Strock, $clr-background, $size, $weight);
 
 //  animation ( FromRight - FromLeft - FromBottom - FromTop - FadeIn - FadeOut - zoomIn - span )
 @include animation($animation, $delay);

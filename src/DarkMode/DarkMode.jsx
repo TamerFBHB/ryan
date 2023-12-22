@@ -14,16 +14,14 @@ const DarkMode = () => {
             const val = localStorage.getItem('theme');
             return val ? JSON.parse(val) : themeType.light;
         }
-        return themeType.light?
-        document.querySelector("body").setAttribute("data-theme","light"):
-        document.querySelector("body").setAttribute("data-theme","dark");
-        
+        return  themeType.light;        
     });
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
             localStorage.setItem('theme', JSON.stringify(mode));
         }
+        return  document.querySelector("body").setAttribute("data-theme",mode)
     }, [mode]);
 
         const setDarkMode =()=> {

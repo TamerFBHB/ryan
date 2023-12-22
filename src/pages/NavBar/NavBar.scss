@@ -2,30 +2,24 @@
 
 
 .Bar{
-    @include size(90px, 550PX);
+    @include size(75px, 550PX);
     @include flex-col(start, center) ;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .sideBar-above{
-    @include size(100% , 150PX);
-    @include flex-col(center,center) ;
-    gap: 15px;
-    border-radius: 5px;
+    @include size(100% , 120PX);
     background-color: var(--bg-color);
-}
-
-.sideBar-down{
-    @include size(100% , 400PX);
-    @include flex-col(center,center) ;
-    gap: 30px;
-    margin-top: 8px;
-    background-color:  var(--bg-color);
     border-radius: 5px;
+}
+.sideBar-above .menu-mode{
+    gap: 5px;
+    @include size(100% , 100% );
+    @include flex-col(center,center) ;
 }
 //###### menubar
 .menubar{
     @include size(30px , 30px) ;
-    @include flex-col(center,start) ;
+    @include flex-col(center,center) ;
 }
 .menubar .one, .two , .three{
     background-color: var(--text-color);
@@ -50,36 +44,107 @@
     color:   var(--text-color);
 }
 .Bar-ryan h6{
-    font-size: 8px;
+    font-size: 7px;
     font-weight: 400;
     color: $green-6;
 }
 
-
-
+//sideBar-down
+.sideBar-down{
+    @include size(100% , 430PX);
+    padding: 10px 0;
+    gap: 30px;
+    margin-top: 8px;
+    background-color:  var(--bg-color);
+    border-radius: 5px;
+}
+.sideBar-down ul{
+    @include size(100% , 100% );
+}
+.sideBar-down ul li {
+    @include size(100% , calc(100% / 6));
+    &:hover a{
+        color : $green-4;
+    }
+}
+.sideBar-down ul li:not(:last-child) {    
+    border-bottom: 1px solid var(--border-color);
+}
+.sideBar-down ul li a{
+    color : var(--text-color);
+    @include flex-col(center , center);
+    gap: 5px;
+    @include size(100% , 100% );
+    transition: 0.3s;
+}
+.sideBar-down ul li a .icon{
+    font-size: 18px
+}
 
 
 // screen mobile
-@media (max-width:420px) {
-    .Bar-ryan{
-        display: block;
-    }
+@media (max-width:992px){
     .Bar{
-        @include size(100%, 120PX);
-        @include flex(center, center) ;
-        margin: 0px;
+        position: fixed; 
+        left: 70px;
     }
+}
 
+
+
+@media (max-width:420px) {
+    .Bar{
+        @include size(100%, 160PX);
+        @include flex-col(start, start) ;
+        top:0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        z-index: 200;
+    }
     .sideBar-above{
-        @include size(100%, 60PX);
+        @include size(100%, 80PX);
+        @include flex(center, center);
+        flex-direction: row-reverse;
         border-radius: 0px;
-        // background-color: yellow
+        padding: 0px;
     }
     
-    .sideBar-down{
-        @include size(100%, 60PX);
-        margin: 0px;
-        border-radius: 0px;
+    .sideBar-above  .Bar-ryan{
+        @include size(50%, 100%);
+        @include flex-col(center, center);
+        padding: 15px 0;
+        margin: 0;
+        display:block;
     }
+    .sideBar-above  .menu-mode{
+        @include size(40%, 100%);
+        @include flex(end , center);
+        flex-direction: row-reverse;
+        gap: 10px;
+        padding-right: 15px;
+    }
+    .sideBar-down{
+        @include size(100%, 80PX);
+        @include flex(start,center) ;
+        flex-direction: row;
+        gap: 10px;
+        margin: 0 ;
+        padding: 0;
+        border-radius: 0px;
+        overflow-x: scroll;
+    }
+    ::-webkit-scrollbar-thumb  {
+        border-radius: 20px;
+    }
+    .sideBar-down ul{
+        @include size(100% , 100%); 
+        @include flex(start,center) ;
+    }
+    .sideBar-down ul li {
+        @include size(100% ,  100%); 
+        border: none;
+    }
+
 }
 
