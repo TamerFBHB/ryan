@@ -2,17 +2,40 @@
 
 
 .showPage{
-    @include size(700px , 100vh);
+    @include size(80vw , 90vh);
+    @include flex(start, center);
+}
+.informPage{
+    position: relative;
+    @include size(55% , 100%);
+    @include flex(start, center);
+}
+.homePage{
+    position: relative;
+    @include size(45% , 100%);
     @include flex(start, center);
 }
 
+//  ##### mobile screen
 @media (max-width: 992px){
     .showPage{
-        @include size(calc(80% - 75px), 100vh);
-        @include flex(center, start);
-        margin: 20px 0 20px 80px;
-        border-radius: 8px;
+        @include size(100% , 100%);
+        @include flex-col(end, center);
+        border-radius: 5px;
+        
     }
+    .homePage{
+        position: relative;
+        @include size(100vw, 900px);
+        @include flex(end, center);
+    }
+    .informPage{
+        position: relative;
+        @include size(100%, 100%);
+        @include flex-col(start, end);
+        padding: 10px 50px;
+    }
+
 }
 
 @media (max-width: 420px){
@@ -22,5 +45,17 @@
         @include flex(start, start);
         margin: 0;
         margin-top: 10px;
+    }
+    .homePage{
+        position: relative;
+        @include size(100%,100%);
+        @include flex(start, start);
+        background-color: red;
+    }
+    .informPage{
+        position: relative;
+        @include size(100%, 100%);
+        @include flex-col(start, end);
+        padding: 10px 0px;
     }
 }

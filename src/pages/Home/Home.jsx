@@ -7,11 +7,19 @@ import { BsTwitterX } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import NavBar from '../NavBar/NavBar';
+import NavBarMobil from '../NavBarMobile/NavBarMobil';
 
-const Home = () => {
+const Home = ({setstate, scrollToSection , VAbout, VResume}) => {
+
     return (
         <div className='AllHome' >           
-            <NavBar />
+            <NavBar setstate={setstate}/>
+
+            <NavBarMobil 
+                VAbout={VAbout}
+                VResume={VResume}
+                scrollToSection={scrollToSection}/>
+
             <div className='home'>
                 <img src={avatar1} alt='' className='avatar1' />
                 <div className='inform-ryan'>

@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import { FaList, FaNewspaper, FaOpencart, FaRegFolderOpen, FaRegUser } from "react-icons/fa";
 import { BsEnvelope } from "react-icons/bs";
 
-const NavBar = () => {
+const NavBar = ({setstate}) => {
     return (
         <div className='Bar'>
             <div className='sideBar-above'>
@@ -44,15 +44,15 @@ const NavBar = () => {
 
             <div className='sideBar-down'>
                 <ul>
-                    <li><NavLink>
+                    <li onClick={()=>setstate(1)}><NavLink >
                         <FaRegUser className='icon' />
                         about
                     </NavLink></li>
-                    <li ><NavLink>
+                    <li onClick={()=>setstate(2)} ><NavLink >
                         <FaList className='icon' />
                         resume
                     </NavLink></li>
-                    <li><NavLink>
+                    <li><NavLink onClick={()=>setstate(3)}>
                         <FaRegFolderOpen className='icon' />
                         projects
                     </NavLink></li>

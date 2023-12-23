@@ -1,0 +1,19 @@
+
+.open{
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+}
+.close{        
+    transform: translateX(-480px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media (max-width:992px) {
+    .about,.resumes{
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+    }
+}

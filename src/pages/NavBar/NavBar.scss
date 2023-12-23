@@ -2,9 +2,8 @@
 
 
 .Bar{
-    @include size(75px, 550PX);
-    @include flex-col(start, center) ;
-    margin-top: 15px;
+    @include size(75px, 100%);
+    margin-top: 30px;
 }
 .sideBar-above{
     @include size(100% , 120PX);
@@ -19,7 +18,7 @@
 //###### menubar
 .menubar{
     @include size(30px , 30px) ;
-    @include flex-col(center,center) ;
+    @include flex-col(center,start) ;
 }
 .menubar .one, .two , .three{
     background-color: var(--text-color);
@@ -30,7 +29,8 @@
     height: 2px;
     margin-top: 6px;
 }
-.menubar:hover .one{
+.menubar:hover .one ,
+.menubar:hover .three{
     width: 60%;
 }
 
@@ -75,6 +75,9 @@
     @include flex-col(center , center);
     gap: 5px;
     @include size(100% , 100% );
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
     transition: 0.3s;
 }
 .sideBar-down ul li a .icon{
@@ -86,65 +89,7 @@
 @media (max-width:992px){
     .Bar{
         position: fixed; 
-        left: 70px;
+        visibility: hidden;
     }
-}
-
-
-
-@media (max-width:420px) {
-    .Bar{
-        @include size(100%, 160PX);
-        @include flex-col(start, start) ;
-        top:0;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        z-index: 200;
-    }
-    .sideBar-above{
-        @include size(100%, 80PX);
-        @include flex(center, center);
-        flex-direction: row-reverse;
-        border-radius: 0px;
-        padding: 0px;
-    }
-    
-    .sideBar-above  .Bar-ryan{
-        @include size(50%, 100%);
-        @include flex-col(center, center);
-        padding: 15px 0;
-        margin: 0;
-        display:block;
-    }
-    .sideBar-above  .menu-mode{
-        @include size(40%, 100%);
-        @include flex(end , center);
-        flex-direction: row-reverse;
-        gap: 10px;
-        padding-right: 15px;
-    }
-    .sideBar-down{
-        @include size(100%, 80PX);
-        @include flex(start,center) ;
-        flex-direction: row;
-        gap: 10px;
-        margin: 0 ;
-        padding: 0;
-        border-radius: 0px;
-        overflow-x: scroll;
-    }
-    ::-webkit-scrollbar-thumb  {
-        border-radius: 20px;
-    }
-    .sideBar-down ul{
-        @include size(100% , 100%); 
-        @include flex(start,center) ;
-    }
-    .sideBar-down ul li {
-        @include size(100% ,  100%); 
-        border: none;
-    }
-
 }
 

@@ -1,14 +1,16 @@
 @use "../../SASS/Main" as *;
 
 .AllHome {
-  @include size(700px, 90vh);
-  @include flex(end, START);
+  position: relative;
+  @include size(100%, 100%);
+  @include flex(start, center);
+  z-index: 1000;
 }
 .home {
-  @include size(calc(80% - 75px), 100%);
+  @include size(calc(100% - 75px), 100%);
   margin-left: 10px;
   background-color:  var(--bg-color) ;
-  border-radius: 8px;
+  border-radius: 5px;
   position: relative;
 }
 .avatar1 {
@@ -59,24 +61,37 @@
 // screen mobile
 @media (max-width: 992px) {
   .AllHome {
-      @include size(100%, 70%);
-      @include flex(center, start);
-      padding-top: 20px;
+    position: relative;
+    @include size(100%, 100%);
+    @include flex(end, end);
+    padding: 40px 50px 0;
+    z-index: 1000;
   }
   .home {
-    @include size(calc(80% - 75px), 100%);    
-    margin-left: 80px;
+    position: relative;
+    @include size(calc(100% - 95px), 100%);
+    border-radius: 5px;
   }
 }
 @media (max-width: 420px) {
-    .AllHome {
-        @include size(100vw ,100%);
-        @include flex-col(start, center);
-        padding: 0;
-        margin: 0;
-    }
-    .home {
-        @include size(100%, 100%);
-        margin-left: 0px;
-      }
+  .AllHome {
+    @include flex(start, start);
+    @include size(100%, calc(100vh - 150px));
+    padding: 0px;
+  }
+  .home {
+    position: relative;
+    @include size(100%, 100%); 
+    margin-left: 0px;
+  }
+  .avatar1 {
+    @include size(100%, 55%);
+  }
+  .home .Footer-home {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include size(100%, 60px);
+  }
+  
   }
