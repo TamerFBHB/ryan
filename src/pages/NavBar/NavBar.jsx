@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import { FaList, FaNewspaper, FaOpencart, FaRegFolderOpen, FaRegUser } from "react-icons/fa";
 import { BsEnvelope } from "react-icons/bs";
 
-const NavBar = ({setstate}) => {
+const NavBar = ({setstate ,state}) => {
     return (
         <div className='Bar'>
             <div className='sideBar-above'>
@@ -44,27 +44,27 @@ const NavBar = ({setstate}) => {
 
             <div className='sideBar-down'>
                 <ul>
-                    <li onClick={()=>setstate(1)}><NavLink >
+                    <li onClick={()=>setstate(1)}><NavLink  className={`${state=== 1? "active" : "noActive"}`}>
                         <FaRegUser className='icon' />
                         about
                     </NavLink></li>
-                    <li onClick={()=>setstate(2)} ><NavLink >
+                    <li onClick={()=>setstate(2)} ><NavLink  className={`${state===2?"active":"noActive" }`} >
                         <FaList className='icon' />
                         resume
                     </NavLink></li>
-                    <li><NavLink onClick={()=>setstate(3)}>
+                    <li onClick={()=>setstate(3)} ><NavLink  className={`${state===3?"active":"noActive" }`} >
                         <FaRegFolderOpen className='icon' />
                         projects
                     </NavLink></li>
-                    <li ><NavLink>
+                    <li onClick={()=>setstate(4)} ><NavLink  className={`${state===4?"active":"noActive" }`} >
                         <FaNewspaper className='icon' />
                         blog
                     </NavLink></li>
-                    <li><NavLink>
+                    <li onClick={()=>setstate(5)} ><NavLink  className={`${state===5?"active":"noActive" }`} >
                         <BsEnvelope className='icon' />
                         contact
                     </NavLink></li>
-                    <li><NavLink>
+                    <li onClick={()=>setstate(6)} ><NavLink  className={`${state===6?"active":"noActive" }`} >
                         <FaOpencart className='icon' />
                         products
                     </NavLink></li>

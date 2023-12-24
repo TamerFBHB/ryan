@@ -1,12 +1,21 @@
 import React from 'react';
 import "./About.scss"
-import { FaRegBuilding, FaChartLine, FaRegChartBar, FaChartPie, FaRocket } from "react-icons/fa";
+import { FaRegBuilding, FaChartLine, FaRegChartBar, FaChartPie, FaRocket, FaTrophy, FaFlag } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
+import { BiSolidAlbum } from "react-icons/bi";
+import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
+import fotoRayan from "../../images/rayan-foto.jpg"
+import upwork from "../../images/upwork.png"
+import google from "../../images/google.png"
+import envato from "../../images/envato.svg"
+import freelancer from "../../images/freelancer.png"
+import { GiCoffeeCup } from "react-icons/gi";
 
-const About = ({state , VAbout}) => {
-    
+const About = ({ state, VAbout }) => {
+
     return (
-        <div ref={VAbout} className={`about ${state=== 1? "open" : "close"}`}>
+        <div ref={VAbout} className={`about ${state === 1 ? "open" : "close"}`}>
+
             <div className='about-me'>
                 <h3><span>A</span>bout Me</h3>
                 <div className='about-information'>
@@ -113,6 +122,83 @@ const About = ({state , VAbout}) => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className='fact'>
+                <h3><span>F</span>un Facts</h3>
+                <div className='fun-fact'>
+                    <div className='box-fact'>
+                        <div className='bg-icon-card'>
+                            <BiSolidAlbum className='icon-card' />
+                        </div>
+                        <p>80+ Albumes</p>
+                        <p>Listened</p>
+                    </div>
+
+                    <div className='box-fact'>
+                        <div className='bg-icon-card'>
+                            <FaTrophy className='icon-card' />
+                        </div>
+                        <p>15 Awards Won</p>
+                    </div>
+
+                    <div className='box-fact'>
+                        <div className='bg-icon-card'>
+                            <GiCoffeeCup  className='icon-card' />
+                        </div>
+                        <p>1 000+ Cup of</p>
+                        <p>Coffee</p>
+                    </div>
+
+                    <div className='box-fact'>
+                        <div className='bg-icon-card'>
+                            <FaFlag className='icon-card' />
+                        </div>
+                        <p>10+ Counters</p>
+                        <p>Visited</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='Quote'>
+                <h3><span>Q</span>uote</h3>
+                <div className='quote-Ryan'>
+                    <div>
+                        <RiDoubleQuotesL className='icon-quote'/>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate rem omnis voluptatibus rerum, nemo corporis! Iure blanditiis minus reiciendis ipsa, laborum eligendi sed facilis ut pariatur tempora accusantium deleniti beatae?</p>
+                        <RiDoubleQuotesR  className='icon-quote'/>
+                    </div>
+                    <div className='foto-Rayan'>
+                        <img src={fotoRayan } alt='' />
+                        <h4>Ryan Adlard</h4>
+                        <p>Web Designer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='client'>
+                <h3><span>C</span>lient</h3>
+                <div className='client-card'>
+                    <div className='box-client'>
+                        <img src={upwork} alt='' />
+                    </div>
+                    <div className='box-client'>
+                        <img src={google} alt='' />
+                    </div>
+                    <div className='box-client'>
+                        <img src={envato} alt='' />
+                    </div>
+                    <div className='box-client'>
+                        <img src={freelancer} alt='' />
+                    </div>
+                </div>
+            </div>
+
+            <div className='SEO'>
+            <h3><span>S</span>EO Text</h3>
+            <div className='text-SEO'>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum nobis reiciendis maiores, dolorem quasi laboriosam tempora, impedit aut ipsa adipisci, ullam modi cupiditate voluptatem dignissimos consequuntur sequi temporibus eius facere?</p>
+            </div>
             </div>
         </div>
     );

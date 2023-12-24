@@ -235,3 +235,7 @@
   line-height: 80px;
 }
 
+//23- image become gary
+@mixin img-gray{
+  filter: contrast(0);
+}

@@ -50,7 +50,6 @@
         position: relative;
         @include size(100%,100%);
         @include flex(start, start);
-        background-color: red;
     }
     .informPage{
         position: relative;

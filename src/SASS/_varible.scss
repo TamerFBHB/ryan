@@ -1,4 +1,11 @@
 
+
+.active{
+    color:  var(--bg-text-word);
+}
+.noActive{
+    color: var(--text-color);;
+}
 .open{
     transform: translateX(0);
     visibility: visible;
@@ -10,8 +17,23 @@
     opacity: 0;
 }
 
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background:#868E96;
+    border-radius: 5px;
+}
+
+
+
 @media (max-width:992px) {
-    .about,.resumes{
+    .about,.resumes,
+    .ProjectPage,.blog,
+    .contact,.product{
         transform: translateX(0);
         visibility: visible;
         opacity: 1;

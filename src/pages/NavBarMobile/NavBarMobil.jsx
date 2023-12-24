@@ -7,7 +7,7 @@ import { FaList, FaNewspaper, FaOpencart, FaRegFolderOpen, FaRegUser } from "rea
 import { BsEnvelope } from "react-icons/bs";
 
 
-const NavBarMobil = ({scrollToSection , VAbout ,VResume}) => {
+const NavBarMobil = ({scrollToSection , VAbout ,VResume ,VProject,VBlog, VContact,VProduct}) => {
     return (
         <div className='Bar-mobile'>
         <div className='sideBar-above'>
@@ -45,27 +45,33 @@ const NavBarMobil = ({scrollToSection , VAbout ,VResume}) => {
 
         <div className='sideBar-down'>
             <ul>
-                <li><NavLink onClick={()=>{scrollToSection(VAbout)}} >
+                <li><NavLink onClick={()=>{scrollToSection(VAbout)}}
+                    >
                     <FaRegUser className='icon' />
                     about
                 </NavLink></li>
-                <li><NavLink  onClick={()=>{scrollToSection(VResume)}}>
+                <li><NavLink  onClick={()=>{scrollToSection(VResume)}}
+                        >
                     <FaList className='icon' />
                     resume
                 </NavLink></li>
-                <li><NavLink >
+                <li><NavLink onClick={()=>{scrollToSection(VProject)}} 
+                >
                     <FaRegFolderOpen className='icon' />
                     projects
                 </NavLink></li>
-                <li ><NavLink>
+                <li><NavLink onClick={()=>{scrollToSection(VBlog)}} 
+                >
                     <FaNewspaper className='icon' />
                     blog
                 </NavLink></li>
-                <li><NavLink>
+                <li><NavLink  onClick={()=>{scrollToSection(VContact)}} 
+                >
                     <BsEnvelope className='icon' />
                     contact
                 </NavLink></li>
-                <li><NavLink>
+                <li><NavLink onClick={()=>{scrollToSection(VProduct)}}
+                >
                     <FaOpencart className='icon' />
                     products
                 </NavLink></li>

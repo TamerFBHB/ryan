@@ -64,20 +64,18 @@
 .sideBar-down ul li {
     @include size(100% , calc(100% / 6));
     &:hover a{
-        color : $green-4;
+        color :  var(--bg-text-word);
     }
 }
 .sideBar-down ul li:not(:last-child) {    
     border-bottom: 1px solid var(--border-color);
 }
 .sideBar-down ul li a{
-    color : var(--text-color);
     @include flex-col(center , center);
     gap: 5px;
     @include size(100% , 100% );
     text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 14px;
     transition: 0.3s;
 }
 .sideBar-down ul li a .icon{

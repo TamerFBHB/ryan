@@ -9,15 +9,18 @@ import { FaInstagram, FaYoutube } from "react-icons/fa";
 import NavBar from '../NavBar/NavBar';
 import NavBarMobil from '../NavBarMobile/NavBarMobil';
 
-const Home = ({setstate, scrollToSection , VAbout, VResume}) => {
+const Home = ({setstate, scrollToSection , VAbout, VResume , 
+                state , VProject , VBlog , VContact , VProduct}) => {
 
     return (
         <div className='AllHome' >           
-            <NavBar setstate={setstate}/>
+            <NavBar setstate={setstate} state={state}/>
 
             <NavBarMobil 
-                VAbout={VAbout}
-                VResume={VResume}
+                VAbout={VAbout} VResume={VResume}
+                VProject={VProject} VBlog={VBlog}
+                VContact={VContact} VProduct={VProduct} 
+                state={state}
                 scrollToSection={scrollToSection}/>
 
             <div className='home'>

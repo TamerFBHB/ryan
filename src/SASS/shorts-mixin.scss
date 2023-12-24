@@ -64,5 +64,8 @@
 // 22- text strock لكتابه كلمات مفرغه
 @include text-stroke($size-Strock,$clr-Strock, $clr-background, $size, $weight);
 
+//23 any image become gray
+@include img-gray ;
+
 //  animation ( FromRight - FromLeft - FromBottom - FromTop - FadeIn - FadeOut - zoomIn - span )
 @include animation($animation, $delay);

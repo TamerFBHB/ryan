@@ -12,17 +12,6 @@
 
 }
 
-.about::-webkit-scrollbar-track {
-    background: var(--bg-color);
-}
-.about::-webkit-scrollbar{
-    width: 5px;
-}
-.about::-webkit-scrollbar-thumb {
-    background: $gray-6;
-    border-radius: 5px;
-}
-
 
 .about  h3 {
     color: var(--text-color);
@@ -143,14 +132,14 @@
 .cards .card-price:first-child{
     border-right: 1px solid var(--border-color);
 }
-.cards .card-price .bg-icon-card{
-    @include circle(70px);
+.bg-icon-card{
+    @include circle(65px);
     @include flex(center,center);
     margin-bottom: 10px;
     border: none;
     background-color: var(--bg-text-word);
 }
-.cards .card-price .icon-card{
+.icon-card{
     font-size: 35px;
     fill: white;
 }
@@ -195,7 +184,90 @@
     fill: var(--bg-text-word);
     stroke: var(--bg-text-word);
 }
-// mobile media About
+//section fact
+.fun-fact{
+    @include flex(center,start);
+    flex-wrap: wrap;
+}
+.box-fact{
+    flex-basis: 150px;
+    @include flex-col(center,center);
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    padding: 25px;
+    gap:5px;
+}
+.box-fact:last-child{
+    border-right: none;
+}
+.box-fact p{
+    color: var(--text-color-p);
+    font-size: 14px;
+}
+
+//section quote
+.quote-Ryan{
+    padding: 15px;
+    @include flex-col(center,center);
+    gap: 15px;
+}
+.quote-Ryan div:first-child{
+    @include flex(center,start);
+    gap: 10px;
+}
+.quote-Ryan p{
+    font-size: 14px;
+    color:  var(--text-color-p);
+    text-align: center;
+}
+.quote-Ryan .icon-quote{
+    font-size: 50px;
+    color:  var(--text-color-p);
+    height: fit-content;
+}
+.quote-Ryan .icon-quote:last-child{
+    align-self: end;
+}
+
+.quote-Ryan .foto-Rayan{
+    @include flex-col(center,center);
+}
+.quote-Ryan .foto-Rayan img{
+    @include circle(100px);
+    border: none;
+}
+.quote-Ryan .foto-Rayan h4{
+    color: var(--text-color);
+}
+ //section client
+ .client-card{
+    @include flex(center , center);
+    flex-wrap: wrap
+ }
+.box-client{
+    @include size(150px , 150px);
+    @include flex(center , start);
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    padding: 50px
+}
+
+.box-client img{
+    @include size(120px , 25px);
+    @include img-gray;
+}
+.box-client:last-child{
+    border-right:none;
+}
+ //SEO text
+ .text-SEO{
+    color: var(--text-color-p);
+    border-top: 1px solid var(--border-color);
+    letter-spacing: 0.4px;
+    font-size: 16px;
+    padding: 30px;
+ }
+
 
 
 // mobile screen About
@@ -203,7 +275,7 @@
 @media (max-width: 992px){
     .about{
         position: relative;  
-        @include size(calc(100% - 95px) , 100%);   
+        @include size(calc(100% - 82px) , 100%);   
         scroll-margin-top: 10px;
         min-height: 1500px;
         border-radius: 5px;
@@ -235,4 +307,28 @@
         padding: 10px 0;
     }
     
+    .my-service .row{
+        @include flex-col(center , start);
+        padding: 15px 10px;
+    }
+    .my-service .row .box{
+        @include size(100% , 100%);
+    }
+    .my-service .row .box:first-child{
+        border-right: none;
+    }
+
+    
+.cards{
+    @include flex-col(center , center);
+}
+.cards .card-price{
+    @include size(100% , 100%);
+}
+.cards .card-price:first-child{
+    border-right: none;
+}
+.cards .card-price:last-child{
+    border-top: none;
+}
 }
