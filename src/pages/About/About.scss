@@ -27,12 +27,12 @@
 }
 .about .about-me .about-information{
     @include flex(center,start);
-    border-top: 1px solid var(--border-color);
+    @include border-top-gradient(1px,var(--border-color),var(--border-color),transparent);
 }
 .about .about-me .about-information .hello{
     @include flex-col(start , start);
     @include size(50% , 100%);
-    border-right: 1px solid var(--border-color); 
+    @include border-right-gradient(1px,var(--border-color),var(--border-color),transparent);
     padding: 15px 20px;
     color: var(--text-color) ;
 }
@@ -82,7 +82,7 @@
 .my-service .row{
     @include flex(start , start);
     flex-wrap: wrap;
-    border-top: 1px solid var(--border-color);
+    @include border-top-gradient(1px,transparent,var(--border-color),var(--border-color));
     padding: 15px 20px;
     color: var(--text-color) ;
 }
@@ -92,7 +92,7 @@
     padding: 10px;
 }
 .my-service .row .box:first-child{
-    border-right: 1px solid var(--border-color);
+    @include border-right-gradient(1px,var(--border-color),var(--border-color),transparent);
 }
 .my-service .row h3{    
     color: var(--text-color);
@@ -102,22 +102,12 @@
     text-align: center;
 }
 
-.my-service .bg-icon{
-    @include circle(70px);
-    @include flex(center,center);
-    margin-bottom: 10px;
-    border: none;
-    background-color: var(--bg-text-word);
-}
-.my-service .icon{
-    font-size: 35px;
-    fill: white;
-}
 
 // ####### section my pricing
 
 .cards{
     @include flex(center , center);
+    @include border-top-gradient(1px,transparent,var(--border-color),transparent);
     flex-wrap: wrap
 }
 
@@ -126,22 +116,11 @@
     @include flex-col(center , center);
     gap: 10px;
     padding: 10px;
-    border-top: 1px solid var(--border-color);
+    @include border-top-gradient(1px,transparent,var(--border-color),transparent);
     color: var(--text-color);
 }
-.cards .card-price:first-child{
-    border-right: 1px solid var(--border-color);
-}
-.bg-icon-card{
-    @include circle(65px);
-    @include flex(center,center);
-    margin-bottom: 10px;
-    border: none;
-    background-color: var(--bg-text-word);
-}
-.icon-card{
-    font-size: 35px;
-    fill: white;
+.cards .card-price:first-child{    
+    @include border-right-gradient(1px,var(--border-color),var(--border-color),transparent);
 }
 .cards .card-price span{
     font-size: 14px;
@@ -160,7 +139,7 @@
 .cards .card-price .order{
     @include size(100% , 60px);
     @include flex(center , center);
-    border-top: 1px solid var(--border-color);
+    @include border-top-gradient(1px,transparent,var(--border-color),transparent);
     color: var(--text-color);
     margin-top: 15px;
     text-transform: uppercase;
@@ -187,13 +166,13 @@
 //section fact
 .fun-fact{
     @include flex(center,start);
+    @include border-top-gradient(1px,transparent,var(--border-color),var(--border-color));
     flex-wrap: wrap;
 }
 .box-fact{
-    flex-basis: 150px;
-    @include flex-col(center,center);
-    border-top: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
+    @include size(calc(100% / 4) , 150px);
+    @include flex-col(start,center);   
+    @include border-right-gradient(1px,var(--border-color),var(--border-color),transparent);
     padding: 25px;
     gap:5px;
 }
@@ -202,7 +181,7 @@
 }
 .box-fact p{
     color: var(--text-color-p);
-    font-size: 14px;
+    font-size: 80%;
 }
 
 //section quote
@@ -213,6 +192,8 @@
 }
 .quote-Ryan div:first-child{
     @include flex(center,start);
+    @include border-top-gradient(1px,transparent,var(--border-color),var(--border-color));
+    padding: 20px;
     gap: 10px;
 }
 .quote-Ryan p{
@@ -241,14 +222,14 @@
 }
  //section client
  .client-card{
-    @include flex(center , center);
+    @include flex(center , center);    
+    @include border-top-gradient(1px,transparent,var(--border-color),transparent);
     flex-wrap: wrap
  }
 .box-client{
-    @include size(150px , 150px);
+    @include size(calc(100% / 4) , 150px);
     @include flex(center , start);
-    border-top: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
+    @include border-right-gradient(1px,var(--border-color),var(--border-color),transparent);
     padding: 50px
 }
 
@@ -262,7 +243,7 @@
  //SEO text
  .text-SEO{
     color: var(--text-color-p);
-    border-top: 1px solid var(--border-color);
+    @include border-top-gradient(1px,transparent,var(--border-color),var(--border-color));
     letter-spacing: 0.4px;
     font-size: 16px;
     padding: 30px;

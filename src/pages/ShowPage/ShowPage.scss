@@ -2,18 +2,21 @@
 
 
 .showPage{
-    @include size(80vw , 90vh);
+    @include size(80vw , 100vh);
     @include flex(start, center);
+    overflow-x: hidden;
+    // background-color: green;
 }
 .informPage{
     position: relative;
-    @include size(55% , 100%);
+    @include size(55% , 90%);
     @include flex(start, center);
 }
 .homePage{
     position: relative;
-    @include size(45% , 100%);
+    @include size(45% , 90%);
     @include flex(start, center);
+    z-index: 1000;
 }
 
 //  ##### mobile screen

@@ -239,3 +239,34 @@
 @mixin img-gray{
   filter: contrast(0);
 }
+
+//43 border gradient
+@mixin border-gradient($w,$clr1,$clr2,$clr3){
+  border: $w solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, $clr1,$clr2,$clr3)
+}
+//44 border-top gradient
+@mixin border-top-gradient($w,$clr1,$clr2,$clr3){
+  border-top: $w solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, $clr1,$clr2,$clr3)
+}
+//45 border-bottom gradient
+@mixin border-bottom-gradient($w,$clr1,$clr2,$clr3){
+  border-bottom: $w solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, $clr1,$clr2,$clr3)
+}
+//46 border-right gradient
+@mixin border-right-gradient($w,$clr1,$clr2,$clr3){
+  border-right: $w solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, $clr1,$clr2,$clr3)
+}
+//46 border-left gradient
+@mixin border-left-gradient($w,$clr1,$clr2,$clr3){
+  border-left: $w solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, $clr1,$clr2,$clr3)
+}

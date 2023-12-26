@@ -18,6 +18,7 @@
     --icon-color : #{$gray-8};
     --border-color : #{$gray-3};
 
+    --date-color : #{$gray-6};
     
 }
 
@@ -37,4 +38,55 @@
 
     --icon-color : #{$blue-0};
     --border-color : #{$gray-7};
+
+    --date-color : #{$gray-6};
+}
+
+
+
+
+.bg-icon{
+    @include circle(60px);
+    @include flex(center,center);
+    margin-bottom: 10px;
+    border: none;
+    background-color: var(--bg-text-word);
+    padding: 15px;
+}
+.icon{
+    font-size: 35px;
+    fill: white;
+}
+
+
+
+.active{
+    color:  var(--bg-text-word);
+}
+.noActive{
+    color: var(--text-color);;
+}
+.open{
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;   
+    z-index: 1; 
+}
+.close{        
+    transform: translateX(-480px);
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+
+
+@media (max-width:992px) {
+    .about,.resumes,
+    .ProjectPage,.blog,
+    .contact,.product{
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;      
+        z-index: 1; 
+    }
 }

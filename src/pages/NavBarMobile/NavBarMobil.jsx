@@ -47,32 +47,32 @@ const NavBarMobil = ({scrollToSection , VAbout ,VResume ,VProject,VBlog, VContac
             <ul>
                 <li><NavLink onClick={()=>{scrollToSection(VAbout)}}
                     >
-                    <FaRegUser className='icon' />
+                    <FaRegUser className='nav-icon' />
                     about
                 </NavLink></li>
                 <li><NavLink  onClick={()=>{scrollToSection(VResume)}}
                         >
-                    <FaList className='icon' />
+                    <FaList className='nav-icon' />
                     resume
                 </NavLink></li>
                 <li><NavLink onClick={()=>{scrollToSection(VProject)}} 
                 >
-                    <FaRegFolderOpen className='icon' />
+                    <FaRegFolderOpen className='nav-icon' />
                     projects
                 </NavLink></li>
                 <li><NavLink onClick={()=>{scrollToSection(VBlog)}} 
                 >
-                    <FaNewspaper className='icon' />
+                    <FaNewspaper className='nav-icon' />
                     blog
                 </NavLink></li>
                 <li><NavLink  onClick={()=>{scrollToSection(VContact)}} 
                 >
-                    <BsEnvelope className='icon' />
+                    <BsEnvelope className='nav-icon' />
                     contact
                 </NavLink></li>
                 <li><NavLink onClick={()=>{scrollToSection(VProduct)}}
                 >
-                    <FaOpencart className='icon' />
+                    <FaOpencart className='nav-icon' />
                     products
                 </NavLink></li>
             </ul>

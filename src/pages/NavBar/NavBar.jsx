@@ -45,27 +45,27 @@ const NavBar = ({setstate ,state}) => {
             <div className='sideBar-down'>
                 <ul>
                     <li onClick={()=>setstate(1)}><NavLink  className={`${state=== 1? "active" : "noActive"}`}>
-                        <FaRegUser className='icon' />
+                        <FaRegUser className='nav-icon' />
                         about
                     </NavLink></li>
                     <li onClick={()=>setstate(2)} ><NavLink  className={`${state===2?"active":"noActive" }`} >
-                        <FaList className='icon' />
+                        <FaList className='nav-icon' />
                         resume
                     </NavLink></li>
                     <li onClick={()=>setstate(3)} ><NavLink  className={`${state===3?"active":"noActive" }`} >
-                        <FaRegFolderOpen className='icon' />
+                        <FaRegFolderOpen className='nav-icon' />
                         projects
                     </NavLink></li>
                     <li onClick={()=>setstate(4)} ><NavLink  className={`${state===4?"active":"noActive" }`} >
-                        <FaNewspaper className='icon' />
+                        <FaNewspaper className='nav-icon' />
                         blog
                     </NavLink></li>
                     <li onClick={()=>setstate(5)} ><NavLink  className={`${state===5?"active":"noActive" }`} >
-                        <BsEnvelope className='icon' />
+                        <BsEnvelope className='nav-icon' />
                         contact
                     </NavLink></li>
                     <li onClick={()=>setstate(6)} ><NavLink  className={`${state===6?"active":"noActive" }`} >
-                        <FaOpencart className='icon' />
+                        <FaOpencart className='nav-icon' />
                         products
                     </NavLink></li>
                 </ul>

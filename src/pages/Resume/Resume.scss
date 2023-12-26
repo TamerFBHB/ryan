@@ -3,12 +3,106 @@
 .resumes{
     position: absolute;    
     @include size(100% , 87vh);
-    background-color: green;
+    background-color: var(--bg-color);
     padding: 10px 0;    
+    overflow-y: scroll;    
     transition: 1s;
 }
+.resumes  h3 {
+    color: var(--text-color);
+    font-size: 20px;
+    padding: 15px ;
+}
+.resumes  h3 span{
+    color: var(--text-color-letter);
+    padding: 0px 0px 0 8px;
+    @include circle(5px);
+    background-color: var(--bg-text-letter);
+    border: none;
+}
+.resumes .CV{
+    @include border-top-gradient(1px,var(--border-color),var(--border-color),transparent);
+    @include flex(center , start);
+}
+.resumes .CV .section:not(:last-child){
+    @include border-right-gradient(1px,var(--border-color),var(--border-color),transparent);
+    @include size(50% , 100%);
+}
+.resumes .CV .section{
+    @include size(50% , 100%);    
+    padding: 0 20px;
+}
 
-
+.resumes .CV .section .title{
+    @include size(100% , 100px);
+    @include flex(start , center);
+    text-transform: uppercase;
+    color: var(--text-color);
+    gap: 5px;
+}
+.resumes .CV .section .body-section{
+    @include border-top-gradient(1px,var(--border-color),var(--border-color),transparent);
+    @include flex-col(start , start);
+    gap: 3px;
+    padding: 20px 0;
+}
+.resumes .CV .section .body-section .ink{
+    font-size: 12px;
+    color: var(--text-color);
+}
+.resumes .CV .section .date1{
+    border: 1px solid var(--bg-second-color);
+    @include size(fit-content, 25px);
+    font-size: 15px;
+    padding: 0  5px;
+}
+.resumes .CV .section .body-section .date1 p{
+    color: var(--bg-text-word);
+}
+.resumes .CV .section .body-section .tradeMark{
+    @include size(100% , fit-content);
+    @include flex(space-between , center);
+}
+.resumes .CV .section .body-section .tradeMark h2,
+.resumes .CV .section .body-section .tradeMark h4{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: var(--text-color);
+}
+.resumes .CV .section .body-section .tradeMark h4{
+    font-size: 16px;
+}
+.resumes .CV .section .body-section .tradeMark span{
+    text-transform: uppercase;
+}
+.resumes .CV .section .body-section .tradeMark  img{
+    @include size(75px , 25px);
+    @include img-gray;
+}
+.resumes .CV .section .body-section p{
+    color: var(--text-color);
+}
+.resumes .CV .section .date{
+    @include size(fit-content, 25px);
+    border: 1px solid  var( --date-color);
+    font-size: 15px;
+    padding: 0  5px;
+}
+.resumes .CV .section .body-section .date p{
+    color: var( --date-color);
+}
+.resumes .CV .section .body-section  .certificate{
+    @include flex(center,center);
+    color: var(--text-color);
+    gap: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.resumes .CV .section .body-section  .certificate:hover {
+    color :var(--bg-text-word);
+}
+// mobile screen
 @media (max-width:992px) {
     .resumes{
         position: relative;  

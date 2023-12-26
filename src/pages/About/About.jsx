@@ -88,8 +88,8 @@ const About = ({ state, VAbout }) => {
                 <h3><span>P</span>ricing</h3>
                 <div className='cards'>
                     <div className='card-price'>
-                        <div className='bg-icon-card'>
-                            <FaRocket className='icon-card' />
+                        <div className='bg-icon'>
+                            <FaRocket className='icon' />
                         </div>
                         <h4>Popular</h4>
                         <h1><span>$</span>39<span>hour </span></h1>
@@ -105,8 +105,8 @@ const About = ({ state, VAbout }) => {
                         </div>
                     </div>
                     <div className='card-price'>
-                        <div className='bg-icon-card'>
-                            <FaChartLine className='icon-card' />
+                        <div className='bg-icon'>
+                            <FaChartLine className='icon' />
                         </div>
                         <h4>Premium</h4>
                         <h1><span>$</span>59<span>hour </span></h1>
@@ -128,31 +128,31 @@ const About = ({ state, VAbout }) => {
                 <h3><span>F</span>un Facts</h3>
                 <div className='fun-fact'>
                     <div className='box-fact'>
-                        <div className='bg-icon-card'>
-                            <BiSolidAlbum className='icon-card' />
+                        <div className='bg-icon'>
+                            <BiSolidAlbum className='icon' />
                         </div>
                         <p>80+ Albumes</p>
                         <p>Listened</p>
                     </div>
 
                     <div className='box-fact'>
-                        <div className='bg-icon-card'>
-                            <FaTrophy className='icon-card' />
+                        <div className='bg-icon'>
+                            <FaTrophy className='icon' />
                         </div>
                         <p>15 Awards Won</p>
                     </div>
 
                     <div className='box-fact'>
-                        <div className='bg-icon-card'>
-                            <GiCoffeeCup  className='icon-card' />
+                        <div className='bg-icon'>
+                            <GiCoffeeCup  className='icon' />
                         </div>
                         <p>1 000+ Cup of</p>
                         <p>Coffee</p>
                     </div>
 
                     <div className='box-fact'>
-                        <div className='bg-icon-card'>
-                            <FaFlag className='icon-card' />
+                        <div className='bg-icon'>
+                            <FaFlag className='icon' />
                         </div>
                         <p>10+ Counters</p>
                         <p>Visited</p>

@@ -67,5 +67,78 @@
 //23 any image become gray
 @include img-gray ;
 
-//  animation ( FromRight - FromLeft - FromBottom - FromTop - FadeIn - FadeOut - zoomIn - span )
+//24- #############   Dot-Pulse   #############
+@include dot-pulse($clr , $w ,$h);
+
+//25- #############   Dot-Elastic   #############
+@include dot-elastic($clr , $w ,$h);
+
+//26- #############   Dot Flashing   #############
+@include dot-flashing( $w ,$h);
+
+//27- #############   Dot Revolution   #############
+@include dot-revolution ($clr, $w ,$h);
+
+//28- #############   Dot Revolution   #############
+@include dot-carousel( $w ,$h);
+
+//29- #############   Dot Typing   #############
+@include dot-typing( $w ,$h);
+
+//30- #############   Dot Windmill   #############
+@include dot-windmill( $clr, $w ,$h);
+
+//31- #############   Dot Bricks   #############
+@include dot-bricks( $w ,$h);
+
+//32- #############   Dot Floating   #############
+@include dot-floating($clr, $w ,$h);
+
+//33- #############   Dot Fire   #############
+@include dot-fire( $w ,$h);
+
+//34- #############   Dot Spin   #############
+@include dot-spin( $w ,$h);
+
+//35- #############   Dot Falling   #############
+@include dot-falling( $w ,$h);
+
+//36- #############   Dot Stretching   #############
+@include dot-stretching( $clr,$w ,$h);
+
+//37- #############   Dot Gathering   #############
+@include dot-gathering($clr, $w ,$h);
+
+//38- #############   Dot Hourglass   #############
+@include dot-hourglass($clr, $w ,$h);
+
+//39- #############   Dot Overtaking   #############
+@include dot-overtaking($clr, $w ,$h);
+
+//40- #############   Dot Shuttle   #############
+@include dot-shuttle($clr, $w ,$h);
+
+//40- #############   Dot Bouncing   #############
+@include dot-bouncing($h);
+
+//41- #############   Dot Rolling   #############
+@include dot-rolling($h);
+
+//42  animation ( FromRight - FromLeft - FromBottom - FromTop - FadeIn - FadeOut - zoomIn - span )
 @include animation($animation, $delay);
+
+//43 border gradient
+@include border-gradient($w,$clr1,$clr2,$clr3);
+
+  //44 border-top gradient
+@include border-top-gradient($w,$clr1,$clr2,$clr3);
+
+//45 border-bottom gradient
+@include border-bottom-gradient($w,$clr1,$clr2,$clr3);
+
+//46 border-right gradient
+@include border-right-gradient($w,$clr1,$clr2,$clr3);
+
+//46 border-left gradient
+@include border-left-gradient($w,$clr1,$clr2,$clr3);
+
